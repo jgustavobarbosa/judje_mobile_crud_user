@@ -1,0 +1,7 @@
+{
+  "name": "JUDJe",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
