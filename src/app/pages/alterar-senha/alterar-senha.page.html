@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Alterar senha</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar color="primary">
+      <ion-title size="large">Alterar senha</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-grid>
+    <form (submit)="alterar()">
+      <ion-row>
+        <ion-input
+          type="password"
+          [(ngModel)]="novaSenha"
+          name="nova-senha"
+          labelPlacement="stacked"
+          label="Nova Senha"
+          placeholder="Nova Senha"
+          fill="outline"
+        >
+          <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+        </ion-input>
+      </ion-row>
+      <ion-row>
+        <ion-input
+          type="password"
+          [(ngModel)]="confirmacaoSenha"
+          name="confirmacao-senha"
+          labelPlacement="stacked"
+          label="Confirme a senha"
+          placeholder="Confirme a senha"
+          fill="outline"
+        >
+          <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+        </ion-input>
+      </ion-row>
+      <ion-row class="ion-justify-content-center">
+        <ion-button type="submit" class="judje" size="default" [disabled]="loading">
+          <ion-spinner *ngIf="loading"></ion-spinner> Alterar
+        </ion-button>
+      </ion-row>
+    </form>
+  </ion-grid>
+</ion-content>
